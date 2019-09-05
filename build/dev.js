@@ -12,8 +12,7 @@ module.exports = webpackMerge(commonJs, {
   devServer: {
     hot: true,
     // host:'',
-    port: '8888',
-    https: true,
+    port: '7777',
     open: true,
     openPage: 'html/index.html'
   }

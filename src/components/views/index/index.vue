@@ -1,14 +1,11 @@
 <template>
   <div class="content">
     <h3>{{ msg }}</h3>
-    <!-- <img src="../../../static/images/test.jpg">
-    <img src="../../../static/images/1.png"> -->
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 <script>
-import { toast } from 'utilsJs';
-import config from 'config';
+import axios from 'axios';
 export default {
   data() {
     return {
@@ -16,8 +13,9 @@ export default {
     };
   },
   mounted() {
-    toast();
-    console.log('::config', config);
+    axios.get('/user').then(res => {
+      console.log(res);
+    });
   }
 };
 </script>

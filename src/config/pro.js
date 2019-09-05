@@ -1,4 +1,5 @@
 const config = {
-  test: 'test'
+  test: 'test',
+  mock: false
 };
 export default config;

@@ -10,16 +10,18 @@ module.exports = {
   },
   plugins: ['vue', 'html'],
   // 对vue文件取消了缩进检查
-  overrides: [{
-    files: ['*.vue'],
-    rules: {
-      indent: 'off'
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 'off'
+      }
     }
-  }],
+  ],
   rules: {
-    // allow paren-less arrow functions
     'arrow-parens': 0,
-    'semi': 0,
+    'space-before-function-paren': 0,
+    semi: 0,
     // allow debugger during development
     // 'no-irregular-whitespace': [
     //   'error',
@@ -30,4 +32,4 @@ module.exports = {
     // ],
     'no-unused-vars': ['warn']
   }
-}
+};
