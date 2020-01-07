@@ -14,7 +14,7 @@ export default {
   },
   mounted() {
     axios.get('/user').then(res => {
-      console.log(res);
+      console.log(res.data);
     });
   }
 };
